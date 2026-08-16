@@ -70,14 +70,12 @@ clear `500` with an explanatory message rather than crashing.
 
 ## Environment variables
 
-```
 DATABASE_URL=postgresql://user:password@ep-example.neon.tech/neondb?sslmode=require
 JWT_SECRET=some-long-random-string
 GOOGLE_CLIENT_ID=your-client-id.apps.googleusercontent.com
 CLOUDINARY_CLOUD_NAME=your-cloud-name
 CLOUDINARY_API_KEY=your-api-key
 CLOUDINARY_API_SECRET=your-api-secret
-```
 
 See above for `DATABASE_URL`, and the root `README.md` for Cloudinary and
 Google. `JWT_SECRET` can be any long random string you generate yourself.
