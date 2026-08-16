@@ -1,0 +1,16 @@
+.loading-state { margin-top: var(--space-6); display: flex; flex-direction: column; gap: var(--space-3); }
+.loading-state__row {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.loading-state__line { height: 12px; border-radius: 4px; background: var(--color-border); animation: pulse 1.3s ease-in-out infinite; }
+.loading-state__line--wide { width: 45%; }
+.loading-state__line--narrow { width: 20%; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+.loading-state__label { text-align: center; margin-top: var(--space-2); font-family: var(--font-mono); font-size: var(--text-sm); color: var(--color-muted); }
+@media (prefers-reduced-motion: reduce) { .loading-state__line { animation: none; opacity: 0.7; } }

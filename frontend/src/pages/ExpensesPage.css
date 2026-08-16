@@ -1,0 +1,10 @@
+.expenses-page__detailed-link {
+  margin-top: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+.expenses-page__detailed-link a {
+  color: var(--color-green-dark);
+  font-weight: 600;
+  text-decoration: underline;
+}

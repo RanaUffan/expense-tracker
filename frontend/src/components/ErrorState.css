@@ -1,0 +1,22 @@
+.error-state {
+  max-width: 420px;
+  margin: var(--space-12) auto;
+  text-align: center;
+  padding: var(--space-8);
+  background: var(--color-red-soft);
+  border: 1px dashed var(--color-red);
+  border-radius: var(--radius-lg);
+}
+.error-state__title { font-family: var(--font-display); font-size: var(--text-lg); font-weight: 600; color: var(--color-red); }
+.error-state__message { margin-top: var(--space-2); color: var(--color-ink-soft); font-size: var(--text-sm); }
+.error-state__retry {
+  margin-top: var(--space-6);
+  background: var(--color-red);
+  color: white;
+  border: none;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: var(--text-sm);
+}
+.error-state__retry:hover { opacity: 0.9; }

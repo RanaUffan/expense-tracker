@@ -1,0 +1,135 @@
+.file-upload__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.file-upload__dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-8) var(--space-4);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  color: var(--color-muted);
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.file-upload__dropzone:hover {
+  border-color: var(--color-green);
+  background: var(--color-green-soft);
+}
+
+.file-upload__dropzone--active {
+  border-color: var(--color-green);
+  background: var(--color-green-soft);
+}
+
+.file-upload__dropzone-text {
+  font-size: var(--text-sm);
+  color: var(--color-ink-soft);
+}
+
+.file-upload__dropzone-text strong {
+  color: var(--color-green-dark);
+}
+
+.file-upload__dropzone-hint {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+}
+
+.file-upload__preview {
+  position: relative;
+  width: 100%;
+  max-width: 220px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.file-upload__preview img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.file-upload__progress-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 36, 28, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-4);
+}
+
+.file-upload__progress-track {
+  width: 80%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.file-upload__progress-fill {
+  height: 100%;
+  background: white;
+  border-radius: 999px;
+  transition: width 0.15s ease;
+}
+
+.file-upload__progress-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: white;
+  font-weight: 600;
+}
+
+.file-upload__preview-actions {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: linear-gradient(to top, rgba(18, 36, 28, 0.75), transparent);
+}
+
+.file-upload__preview-link {
+  font-size: var(--text-xs);
+  color: white;
+  text-decoration: underline;
+}
+
+.file-upload__preview-actions button {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 2px var(--space-3);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-red);
+}
+
+.file-upload__preview-actions button:hover {
+  background: white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .file-upload__progress-fill { transition: none; }
+}

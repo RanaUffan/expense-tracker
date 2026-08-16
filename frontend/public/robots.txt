@@ -1,0 +1,8 @@
+# This is an authenticated personal-finance app — there's nothing
+# behind login worth indexing, so we keep it simple and allow crawling
+# of only the public marketing-relevant pages.
+User-agent: *
+Allow: /login
+Allow: /signup
+Disallow: /expenses
+Disallow: /dashboard
