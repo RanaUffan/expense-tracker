@@ -1,6 +1,7 @@
 .expense-row {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: var(--space-4);
   padding: var(--space-4) var(--space-5);
   background: var(--color-surface);
@@ -11,6 +12,14 @@
 
 .expense-row--deleting { opacity: 0.5; }
 
+.expense-row__info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-width: 0;
+  flex: 1;
+}
+
 .expense-row__receipt {
   width: 40px;
   height: 40px;
@@ -20,7 +29,7 @@
   flex-shrink: 0;
 }
 
-.expense-row__main { flex: 1; min-width: 0; }
+.expense-row__main { min-width: 0; }
 .expense-row__title { font-weight: 600; font-size: var(--text-base); }
 
 .expense-row__meta {
@@ -29,6 +38,7 @@
   margin-top: var(--space-1);
   font-size: var(--text-xs);
   color: var(--color-muted);
+  flex-wrap: wrap;
 }
 
 .expense-row__category {
@@ -40,6 +50,13 @@
 }
 
 .expense-row__payment { font-family: var(--font-mono); }
+
+.expense-row__side {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-shrink: 0;
+}
 
 .expense-row__amount {
   font-family: var(--font-mono);
@@ -67,7 +84,12 @@
 .expense-row__btn--danger:hover:not(:disabled) { border-color: var(--color-red); color: var(--color-red); }
 
 @media (max-width: 560px) {
-  .expense-row { flex-wrap: wrap; }
-  .expense-row__amount { order: 3; }
-  .expense-row__actions { order: 4; margin-left: auto; }
+  .expense-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-3);
+  }
+  .expense-row__side {
+    justify-content: space-between;
+  }
 }
